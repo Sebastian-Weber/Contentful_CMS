@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { createClient } from 'contentful';
+import { useState, useEffect } from "react";
+import { createClient } from "contentful";
 
 const client = createClient({
   space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
@@ -33,14 +33,15 @@ function Contentful() {
     <div>
       {entries.map((entry) => {
         return (
-          <div key={entry.sys.id}>
-            <h2>{entry.fields.title}</h2>
+          <div key={entry.fields.id}>
+            <h2>{entry.fields.name}</h2>
             <img
-              src={entry.fields.image.fields.file.url}
+              src={entry.fields.icon.fields.file.url}
               alt={entry.fields.title}
-              width='50%'
+              width="10%"
             />
             <p>{entry.fields.description}</p>
+            <div>{entry.fields.usage}</div>
           </div>
         );
       })}

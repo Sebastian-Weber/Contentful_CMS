@@ -1,18 +1,13 @@
-// import Contentful from './components/Contentful';
-// import ContentfulCDN from './components/ContentfulCDN';
+import Contentful from "./components/Contentful";
+// import ContentfulCDN from "./components/ContentfulCDN";
+import DetailPage from "./components/DetailPage";
 
 function App() {
   return (
     <>
-      {/* <Contentful />
+      <Contentful />
       <hr />
-      <ContentfulCDN /> */}
-      <h1>
-      Hello World!
-      </h1>
-      <h1 className="text-3xl font-bold underline">
-      Hello Tailwind!
-      </h1>
+      {/* <ContentfulCDN /> */}
     </>
   );
 }
