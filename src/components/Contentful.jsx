@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
+import ApiCard from "./ApiCard";
 
 const client = createClient({
   space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
@@ -30,19 +31,16 @@ function Contentful() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col items-center gap-7">
       {entries.map((entry) => {
         return (
-          <div key={entry.fields.id}>
-            <h2>{entry.fields.name}</h2>
-            <img
-              src={entry.fields.icon.fields.file.url}
-              alt={entry.fields.title}
-              width="10%"
-            />
-            <p>{entry.fields.description}</p>
-            <div>{entry.fields.usage}</div>
-          </div>
+          <ApiCard
+            key={entry.sys.id}
+            title={entry.fields.name}
+            url={entry.fields.icon.fields.file.url}
+            alt={entry.fields.title}
+            description={entry.fields.description}
+          ></ApiCard>
         );
       })}
     </div>
