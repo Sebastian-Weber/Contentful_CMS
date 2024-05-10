@@ -1,6 +1,6 @@
 function ApiCard({ id, title, url, alt, description }) {
   return (
-    <div>
+    <div className="flex-wrap">
       <a
         href="#"
         className="block w-80  p-6 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 "
