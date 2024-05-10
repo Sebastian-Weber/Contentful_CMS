@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import ReactPaginate from "react-paginate";
 import ApiCard from "./ApiCard";
-import DetailPage from "./DetailPage";
 
 const client = createClient({
   space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
@@ -17,6 +16,7 @@ function Items({ currentItems }) {
           return (
             <ApiCard
               key={entry.sys.id}
+              id={entry.fields.id}
               title={entry.fields.name}
               url={entry.fields.icon.fields.file.url}
               alt={entry.fields.title}
@@ -39,6 +39,7 @@ function Contentful({ itemsPerPage }) {
       .getEntries()
       .then((response) => {
         setEntries(response.items);
+        console.log(response.items);
         setIsLoading(false);
       })
       .catch((error) => {
@@ -61,19 +62,21 @@ function Contentful({ itemsPerPage }) {
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen container bg-slate-600">
-        <div className="flex flex-wrap">
+      <div className="flex items-center justify-center min-h-screen container bg-slate-500 flex-col">
+        <div className="flex flex-wrap justify-center">
           <Items currentItems={currentItems} />
-          <ReactPaginate
-            breakLabel="..."
-            nextLabel="next >"
-            onPageChange={handlePageClick}
-            pageRangeDisplayed={5}
-            pageCount={pageCount}
-            previousLabel="< previous"
-            renderOnZeroPageCount={null}
-          />
         </div>
+        <ReactPaginate
+          className="flex flex-row"
+          breakLabel="..."
+          nextLabel="next >"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          pageClassName="mx-3"
+          previousLabel="< previous"
+          renderOnZeroPageCount={null}
+        />
       </div>
     </>
   );
