@@ -31,19 +31,24 @@ function Contentful() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-7">
-      {entries.map((entry) => {
-        return (
-          <ApiCard
-            key={entry.sys.id}
-            title={entry.fields.name}
-            url={entry.fields.icon.fields.file.url}
-            alt={entry.fields.title}
-            description={entry.fields.description}
-          ></ApiCard>
-        );
-      })}
-    </div>
+    <>
+
+      <div class="flex items-center justify-center min-h-screen container bg-slate-600">
+        <div class="flex flex-wrap"> 
+          {entries.map((entry) => {
+            return (
+              <ApiCard
+                key={entry.sys.id}
+                title={entry.fields.name}
+                url={entry.fields.icon.fields.file.url}
+                alt={entry.fields.title}
+                description={entry.fields.description}
+              ></ApiCard>
+            );
+          })}
+        </div>
+      </div>
+    </>
   );
 }
 
