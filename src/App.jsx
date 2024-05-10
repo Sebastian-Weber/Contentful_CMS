@@ -1,12 +1,12 @@
 import Contentful from "./components/Contentful";
-// import ContentfulCDN from './components/ContentfulCDN';
+import "./App.css";
 
 function App() {
   return (
     <>
-    <div>Header</div>
+      <div>Header</div>
       <div>
-        <Contentful/>
+        <Contentful itemsPerPage={6} />
       </div>
     </>
   );
