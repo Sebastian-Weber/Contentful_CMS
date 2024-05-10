@@ -6,7 +6,7 @@ function App() {
     <>
       <div>Header</div>
       <div>
-        <Contentful />
+        <Contentful itemsPerPage={6} />
       </div>
     </>
   );
