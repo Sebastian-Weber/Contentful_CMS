@@ -61,22 +61,6 @@ function Contentful({ itemsPerPage }) {
 
   return (
     <>
-<<<<<<< HEAD
-      <div className="flex flex-col items-center gap-7">
-        {entries.map((entry) => {
-          return (
-            <ApiCard
-              key={entry.sys.id}
-              title={entry.fields.name}
-              url={entry.fields.icon.fields.file.url}
-              alt={entry.fields.title}
-              description={entry.fields.description}
-            ></ApiCard>
-          );
-        })}
-      </div>
-      <DetailPage />
-=======
       <div className="flex items-center justify-center min-h-screen container bg-slate-600">
         <div className="flex flex-wrap">
           <Items currentItems={currentItems} />
@@ -91,7 +75,6 @@ function Contentful({ itemsPerPage }) {
           />
         </div>
       </div>
->>>>>>> main
     </>
   );
 }
