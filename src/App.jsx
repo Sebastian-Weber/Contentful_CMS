@@ -1,9 +1,13 @@
 import Contentful from "./components/Contentful";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <Contentful />
+      <div>Header</div>
+      <div>
+        <Contentful itemsPerPage={6} />
+      </div>
     </>
   );
 }

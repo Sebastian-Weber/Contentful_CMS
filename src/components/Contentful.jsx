@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { createClient } from "contentful";
+import ReactPaginate from "react-paginate";
 import ApiCard from "./ApiCard";
 import DetailPage from "./DetailPage";
 
@@ -8,16 +9,35 @@ const client = createClient({
   accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
 });
 
-function Contentful() {
+function Items({ currentItems }) {
+  return (
+    <>
+      {currentItems &&
+        currentItems.map((entry) => {
+          return (
+            <ApiCard
+              key={entry.sys.id}
+              title={entry.fields.name}
+              url={entry.fields.icon.fields.file.url}
+              alt={entry.fields.title}
+              description={entry.fields.description}
+            ></ApiCard>
+          );
+        })}
+    </>
+  );
+}
+
+function Contentful({ itemsPerPage }) {
   const [entries, setEntries] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
     setIsLoading(true);
     client
       .getEntries()
       .then((response) => {
-        console.log(response);
         setEntries(response.items);
         setIsLoading(false);
       })
@@ -31,8 +51,17 @@ function Contentful() {
     return <p>Loading...</p>;
   }
 
+  const endOffset = itemOffset + itemsPerPage;
+  const currentItems = entries.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(entries.length / itemsPerPage);
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % entries.length;
+    setItemOffset(newOffset);
+  };
+
   return (
     <>
+<<<<<<< HEAD
       <div className="flex flex-col items-center gap-7">
         {entries.map((entry) => {
           return (
@@ -47,10 +76,24 @@ function Contentful() {
         })}
       </div>
       <DetailPage />
+=======
+      <div className="flex items-center justify-center min-h-screen container bg-slate-600">
+        <div className="flex flex-wrap">
+          <Items currentItems={currentItems} />
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel="next >"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={pageCount}
+            previousLabel="< previous"
+            renderOnZeroPageCount={null}
+          />
+        </div>
+      </div>
+>>>>>>> main
     </>
   );
 }
 
 export default Contentful;
-
-// https://www.contentful.com/developers/docs/javascript/tutorials/using-js-cda-sdk/
