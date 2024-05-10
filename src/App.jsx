@@ -4,7 +4,10 @@ import Contentful from "./components/Contentful";
 function App() {
   return (
     <>
-      <Contentful />
+    <div>Header</div>
+      <div>
+        <Contentful/>
+      </div>
     </>
   );
 }
