@@ -1,11 +1,12 @@
 import Contentful from "./components/Contentful";
+import "./App.css";
 
 function App() {
   return (
     <>
-    <div>Header</div>
+      <div>Header</div>
       <div>
-        <Contentful/>
+        <Contentful />
       </div>
     </>
   );
