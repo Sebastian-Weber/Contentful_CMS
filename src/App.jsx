@@ -4,10 +4,15 @@ import Contentful from "./components/Contentful";
 function App() {
   return (
     <>
-    <div>Header</div>
-      <div>
-        <Contentful/>
-      </div>
+    <div>
+      Header
+    </div>
+    <div>
+      <Contentful/>
+    </div>
+    <div>
+      Pagination
+    </div>
     </>
   );
 }

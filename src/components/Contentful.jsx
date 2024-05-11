@@ -33,8 +33,8 @@ function Contentful() {
   return (
     <>
 
-      <div class="flex items-center justify-center min-h-screen container bg-slate-600">
-        <div class="flex flex-wrap"> 
+      <div class="flex items-center justify-center min-h-screen bg-slate-600">
+        <div class="flex flex-wrap gap-2"> 
           {entries.map((entry) => {
             return (
               <ApiCard
