@@ -11,7 +11,32 @@ const client = createClient({
 });
 
 function Contentful() {
+
+  
   const [entries, setEntries] = useState([]);
+
+  useEffect(() => {
+
+      const getEntries = async () => {
+          const res = await fetch(
+                'https://cdn.contentful.com/spaces/moq7l799ngye/environments/master/entries?access_token=bYEd4rlGVi9UX56HgZnWk5uu-umJOhW_JD0IrKQHeF4'
+          );
+          const data = await res.json();
+          setItems(data);
+        };   
+
+      getEntries();
+
+  }, []);
+
+  console.log(items);
+
+  const handlePageClick = (data) => {
+    console.log(data.selected);
+  
+    }
+
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -30,19 +55,15 @@ function Contentful() {
   }, []);
 
   if (isLoading) {
-    return       <div class="flex flex-col items-center justify-center min-h-screen bg-slate-600">
-    <div class="flex flex-wrap gap-2"><p class="text-slate-300">Loading...<BeatLoader color="HotPink" thickness={50} size={10}/></p></div></div>;
-
-  
-  }
-  
-  
+    return <div className="flex flex-col items-center justify-center min-h-screen bg-slate-600">
+    <div className="flex flex-wrap gap-2"><p className="text-slate-300">Loading...<BeatLoader color="HotPink" thickness={50} size={10}/></p></div></div>;
 
 
+}
   return (
     <>
-      <div class="flex flex-col items-center justify-center min-h-screen bg-slate-600">
-        <div class="flex flex-wrap gap-2"> 
+      <div className="flex flex-col items-center justify-center min-h-screen bg-slate-600">
+        <div className="flex flex-wrap gap-2"> 
           {entries.map((entry) => {
             return (
               <ApiCard
@@ -58,22 +79,22 @@ function Contentful() {
       <footer className="sticky bottom-0">
         <div className="p-4">
           <div className="">
-          <ReactPaginate className="flex flex-row font-normal text-slate-300 dark:text-gray-400"
+          <ReactPaginate className="flex flex-row gap-2 font-normal text-slate-300 dark:text-gray-400"
         previousLabel={'<<'}
         nextLabel={'>>'}
         breakLabel={'...'}
-        pageCount={10}
-        marginPageDisplayed={2}
-        pageRangeDisplayed={3}
-
-        containerClassName={'pagination'}
-        pageClassName={'page-item'}
-        pageLinkClassName={'page-link p-2 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'}
-        previousClassName={'page-item'}
-        previousLinkClassName={'page-link p-2 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'}
-        nextClassName={'page-item'}
-        nextLinkClassName={'page-link p-2 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'}
-        breakLinkClassName={'page-link p-2 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'}
+        pageCount={8}
+        marginPageDisplayed={6}
+        pageRangeDisplayed={7}
+        onPageChange={handlePageClick}
+        containerClassName={''}
+        pageClassName={''}
+        pageLinkClassName={'p-2 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'}
+        previousClassName={''}
+        previousLinkClassName={'p-2 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'}
+        nextClassName={''}
+        nextLinkClassName={'p-2 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'}
+        breakLinkClassName={'p-2 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'}
         />
         </div>
         </div>
