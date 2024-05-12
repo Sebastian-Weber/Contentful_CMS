@@ -15,7 +15,9 @@
     "react": "^18.2.0",
     "react-contentful": "^2.0.31",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
     "react-paginate": "^8.2.0",
+    "react-spinners": "^0.13.8",
     "spinners-react": "^1.0.7"
   },
   "devDependencies": {

@@ -10,11 +10,9 @@ function App() {
     <div>
       <Contentful/>
     </div>
-    <div>
-      Pagination
-    </div>
     </>
   );
 }
+
 
 export default App;

@@ -3,12 +3,12 @@ function ApiCard({ id, title, url, alt, description }) {
     <div className="flex-wrap">
       <a
         href="#"
-        className="block w-80 p-6 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 "
+        className="block w-80 p-6 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
       >
         <div className="flex gap-3">
-          <div className="flex row">
-            <img className="h-10" src={url} alt={alt} />
-            <h6 className="pl-2 mb-2 text-base font-bold tracking-tight text-slate-300 ">
+          <div className="flex row items-end pt-0">
+            <img className="h-10 pt-0" src={url} alt={alt} />
+            <h6 className="pl-2 text-base leading-5 font-bold tracking-tight text-slate-300 ">
               {title}
             </h6>
           </div>
