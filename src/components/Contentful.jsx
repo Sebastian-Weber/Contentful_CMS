@@ -15,26 +15,26 @@ function Contentful() {
   
   const [entries, setEntries] = useState([]);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-      const getEntries = async () => {
-          const res = await fetch(
-                'https://cdn.contentful.com/spaces/moq7l799ngye/environments/master/entries?access_token=bYEd4rlGVi9UX56HgZnWk5uu-umJOhW_JD0IrKQHeF4'
-          );
-          const data = await res.json();
-          setItems(data);
-        };   
+  //     const getEntries = async () => {
+  //         const res = await fetch(
+  //               'https://cdn.contentful.com/spaces/moq7l799ngye/environments/master/entries?access_token=bYEd4rlGVi9UX56HgZnWk5uu-umJOhW_JD0IrKQHeF4'
+  //         );
+  //         const data = await res.json();
+  //         setItems(data);
+  //       };   
 
-      getEntries();
+  //     getEntries();
 
-  }, []);
+  // }, []);
 
-  console.log(items);
+  // console.log(items);
 
-  const handlePageClick = (data) => {
-    console.log(data.selected);
+  // const handlePageClick = (data) => {
+  //   console.log(data.selected);
   
-    }
+  //   }
 
 
   const [isLoading, setIsLoading] = useState(true);
@@ -86,7 +86,7 @@ function Contentful() {
         pageCount={8}
         marginPageDisplayed={6}
         pageRangeDisplayed={7}
-        onPageChange={handlePageClick}
+        // onPageChange={handlePageClick}
         containerClassName={''}
         pageClassName={''}
         pageLinkClassName={'p-2 bg-slate-700 border border-gray-200 rounded-lg shadow hover:bg-slate-600 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700'}
