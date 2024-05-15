@@ -64,19 +64,19 @@ function Contentful({ itemsPerPage }) {
   return (
     <>
       <div className="flex flex-col items-center justify-center px-12 min-h-screen bg-slate-600">
-        <div className="flex flex-wrap justify-normal gap-2">
+        <div className="flex flex-wrap mx-6 justify-normal gap-3">
           <Items currentItems={currentItems} className="flex flex-wrap gap-2" />
         </div>
         <footer className="sticky bottom-0">
               <div className="p-4">
                 <div className="">
-                  <ReactPaginate className="flex flex-row gap-2 font-normal text-slate-300 dark:text-gray-400"
+                  <ReactPaginate className="flex flex-row p-4 gap-2 font-normal text-slate-300 dark:text-gray-400 bg-slate-500"
                     onPageChange={handlePageClick}
                     pageCount={pageCount}
                     renderOnZeroPageCount={null}
                     breakLabel="..."
                     nextLabel="next >"
-                    pageRangeDisplayed={5}
+                    pageRangeDisplayed={3}
                     previousLabel="< previous"
                   />
                   </div>
