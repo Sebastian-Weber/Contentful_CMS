@@ -21,6 +21,8 @@ function Items({ currentItems }) {
               url={entry.fields.icon.fields.file.url}
               alt={entry.fields.title}
               description={entry.fields.description}
+              popularity={entry.fields.popularity}
+              category={entry.fields.category}
             ></ApiCard>
           );
         })}
@@ -48,10 +50,17 @@ function Contentful({ itemsPerPage }) {
   }, []);
 
   if (isLoading) {
-    return <div className="flex flex-col items-center justify-center min-h-screen bg-slate-600">
-    <div className="flex flex-wrap gap-2"><p className="text-slate-300">Loading...<BeatLoader color="HotPink" thickness={50} size={10}/></p></div></div>;
-
-}
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-slate-600">
+        <div className="flex flex-wrap gap-2">
+          <p className="text-slate-300">
+            Loading...
+            <BeatLoader color="HotPink" thickness={50} size={10} />
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = entries.slice(itemOffset, endOffset);
@@ -68,20 +77,21 @@ function Contentful({ itemsPerPage }) {
           <Items currentItems={currentItems} className="flex flex-wrap gap-2" />
         </div>
         <footer className="sticky bottom-0">
-              <div className="p-4">
-                <div className="">
-                  <ReactPaginate className="flex flex-row p-4 gap-2 font-normal text-slate-300 dark:text-gray-400 bg-slate-500"
-                    onPageChange={handlePageClick}
-                    pageCount={pageCount}
-                    renderOnZeroPageCount={null}
-                    breakLabel="..."
-                    nextLabel="next >"
-                    pageRangeDisplayed={3}
-                    previousLabel="< previous"
-                  />
-                  </div>
-                </div>
-            </footer>
+          <div className="p-4">
+            <div className="">
+              <ReactPaginate
+                className="flex flex-row p-4 gap-2 font-normal text-slate-300 dark:text-gray-400 bg-slate-500"
+                onPageChange={handlePageClick}
+                pageCount={pageCount}
+                renderOnZeroPageCount={null}
+                breakLabel="..."
+                nextLabel="next >"
+                pageRangeDisplayed={3}
+                previousLabel="< previous"
+              />
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );
