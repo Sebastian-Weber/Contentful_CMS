@@ -62,12 +62,12 @@ function Contentful({ itemsPerPage }) {
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen container bg-slate-500 flex-col">
+      <div className="flex items-center justify-center min-h-screen container bg-slate-600 flex-col">
         <div className="flex flex-wrap justify-center">
           <Items currentItems={currentItems} />
         </div>
         <ReactPaginate
-          className="flex flex-row"
+          className="flex flex-row bg-slate-300 p-6 w-full m-8"
           breakLabel="..."
           nextLabel="next >"
           onPageChange={handlePageClick}
