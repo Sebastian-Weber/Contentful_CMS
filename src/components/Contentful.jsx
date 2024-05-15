@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { createClient } from "contentful";
 import ReactPaginate from "react-paginate";
 import ApiCard from "./ApiCard";
+import BeatLoader from "react-spinners/BeatLoader";
 
 const client = createClient({
   space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
@@ -49,8 +50,10 @@ function Contentful({ itemsPerPage }) {
   }, []);
 
   if (isLoading) {
-    return <p>Loading...</p>;
-  }
+    return <div className="flex flex-col items-center justify-center min-h-screen bg-slate-600">
+    <div className="flex flex-wrap gap-2"><p className="text-slate-300">Loading...<BeatLoader color="HotPink" thickness={50} size={10}/></p></div></div>;
+
+}
 
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = entries.slice(itemOffset, endOffset);
@@ -62,21 +65,25 @@ function Contentful({ itemsPerPage }) {
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen container bg-slate-600 flex-col">
-        <div className="flex flex-wrap justify-center">
-          <Items currentItems={currentItems} />
+      <div className="flex flex-col items-center justify-center px-12 min-h-screen bg-slate-600">
+        <div className="flex flex-wrap mx-6 justify-normal gap-3">
+          <Items currentItems={currentItems} className="flex flex-wrap gap-2" />
         </div>
-        <ReactPaginate
-          className="flex flex-row bg-slate-300 p-6 w-full m-8"
-          breakLabel="..."
-          nextLabel="next >"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={pageCount}
-          pageClassName="mx-3"
-          previousLabel="< previous"
-          renderOnZeroPageCount={null}
-        />
+        <footer className="sticky bottom-0">
+              <div className="p-4">
+                <div className="">
+                  <ReactPaginate className="flex flex-row p-4 gap-2 font-normal text-slate-300 dark:text-gray-400 bg-slate-500"
+                    onPageChange={handlePageClick}
+                    pageCount={pageCount}
+                    renderOnZeroPageCount={null}
+                    breakLabel="..."
+                    nextLabel="next >"
+                    pageRangeDisplayed={3}
+                    previousLabel="< previous"
+                  />
+                  </div>
+                </div>
+            </footer>
       </div>
     </>
   );
