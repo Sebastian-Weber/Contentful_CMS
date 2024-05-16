@@ -10,7 +10,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Contentful itemsPerPage={6} />} />
-          <Route path="/API-details" element={<DetailPage />} />
+          <Route path="/API-details/:id" element={<DetailPage />} />
         </Routes>
       </div>
     </>
