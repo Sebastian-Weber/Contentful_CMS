@@ -61,7 +61,10 @@ function ApiCard({ id, title, url, alt, description, popularity, category }) {
         <p className="font-normal text-slate-300 dark:text-gray-400 h-20 overflow-hidden">
           {description}
         </p>
-        <button id="toggle-btn" class="mt-4 text-blue-500 focus:outline-none">
+        <button
+          id="toggle-btn"
+          className="mt-4 text-blue-500 focus:outline-none"
+        >
           Read More
         </button>
 
