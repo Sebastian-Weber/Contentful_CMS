@@ -16,6 +16,8 @@ function Items({ currentItems }) {
               url={entry.fields.icon.fields.file.url}
               alt={entry.fields.title}
               description={entry.fields.description}
+              popularity={entry.fields.popularity}
+              category={entry.fields.category}
             ></ApiCard>
           );
         })}
