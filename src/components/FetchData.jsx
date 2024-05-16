@@ -6,8 +6,9 @@ const client = createClient({
   accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
 });
 
-function useFetchData(entries, isLoading) {
+function useFetchData() {
   const [entries, setEntries] = useState([]);
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -24,8 +25,7 @@ function useFetchData(entries, isLoading) {
       });
   }, []);
 
-  console.log(entries);
-  return entries, isLoading;
+  return { entries, isLoading };
 }
 
 export default useFetchData;
