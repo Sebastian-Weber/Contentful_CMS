@@ -2,7 +2,7 @@ import Contentful from "./components/Contentful";
 
 import NavbarTop from "./components/NavbarTop";
 import NavbarLeft from "./components/NavbarLeft";
-=======
+
 import DetailPage from "./components/DetailPage";
 
 import "./App.css";
@@ -12,18 +12,15 @@ function App() {
   return (
     <>
       <div>Header</div>
-
-      <NavbarTop/>
+      <NavbarTop />
       <div className="flex row">
-    	  <NavbarLeft/>
-        <Contentful itemsPerPage={6} />
-
+        <NavbarLeft />
+      </div>
       <div>
         <Routes>
           <Route path="/" element={<Contentful itemsPerPage={6} />} />
           <Route path="/API-details/:id" element={<DetailPage />} />
         </Routes>
-
       </div>
     </>
   );
