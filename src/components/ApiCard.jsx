@@ -35,39 +35,48 @@ function ApiCard({ id, title, url, alt, description, popularity, category }) {
     }
   }
 
-  return (
-    <div>
-      <div className="block w-80 p-6 bg-slate-700 border border-slate-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
-        <div className="flex gap-3">
-          <img className="h-10" src={url} alt={alt} />
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-slate-300 ">
-            {title}
-          </h5>
-        </div>
-        <div className="border-t-2 h-32 mt-3">
-          <p className="font-normal text-slate-300 dark:text-gray-400 h-20 overflow-hidden">
-            {description}
-          </p>
-          <button id="toggle-btn" class="mt-4 text-blue-500 focus:outline-none">
-            Read More
-          </button>
-        </div>
-        {/* <div className="font-normal text-slate-300 dark:text-gray-400">
-          Read more
-        </div> */}
+  function getTextColor() {
+    if (popularity > 6.6) {
+      return "green";
+    } else if (popularity <= 6.6 && popularity >= 3.3) {
+      return "yellow";
+    } else if (popularity <= 3.3) {
+      return "red";
+    } else {
+      return "gray";
+    }
+  }
 
-        <div className="flex gap-20 justify-center mt-6">
+  return (
+    <div className="flex-wrap">
+      <div className="block w-80 p-6 pb-2 bg-slate-700 border border-slate-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
+        <div className="flex row items-end pt-0">
+          <img className="h-10 pt-0" src={url} alt={alt} />
+          <h6 className="pl-2 text-base leading-5 font-bold tracking-tight text-slate-300 ">
+            {title}
+          </h6>
+        </div>
+
+        <hr className="w-10rem h-0.5 mx-auto md:my-3 bg-gray-100 border-0 rounded dark:bg-gray-700" />
+        <p className="font-normal text-slate-300 dark:text-gray-400 h-20 overflow-hidden">
+          {description}
+        </p>
+        <button id="toggle-btn" class="mt-4 text-blue-500 focus:outline-none">
+          Read More
+        </button>
+
+        <div className="flex gap-20 justify-center mt-2">
           {popularity ? (
             <div className="flex gap-4 justify-center">
               <img src={getEmoji()} alt="" />
 
-              <p className="font-normal text-slate-300 dark:text-gray-400">
+              <p className={`font-normal text-gray-300 dark:text-gray-400`}>
                 {popularity}
               </p>
             </div>
           ) : (
             <div className="flex gap-4 justify-center">
-              <img src={getEmoji()} alt="" />
+              <img className="w-" src={getEmoji()} alt="" />
 
               <p className="font-normal text-slate-300 dark:text-gray-400">-</p>
             </div>
