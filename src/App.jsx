@@ -11,7 +11,7 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      <div>Header</div>
+      {/* <div>Header</div> */}
       <NavbarTop />
       <div className="flex row">
         <NavbarLeft />

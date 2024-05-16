@@ -75,7 +75,6 @@ function ApiCard({ id, title, url, alt, description, popularity, category }) {
           {popularity ? (
             <div className="flex gap-4 justify-center">
               <img src={getEmoji()} alt="" />
-
               <p className={`font-normal text-gray-300 dark:text-gray-400`}>
                 {popularity}
               </p>
@@ -88,9 +87,6 @@ function ApiCard({ id, title, url, alt, description, popularity, category }) {
             </div>
           )}{" "}
           {category && <span className={colors[category]}>{category}</span>}
-          {/* <div className="font-normal text-slate-300 dark:text-gray-400">
-            {category}
-          </div> */}
         </div>
       </div>
     </div>
