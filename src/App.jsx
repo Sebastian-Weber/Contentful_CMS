@@ -11,11 +11,11 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-      <div>Header</div>
+      {/* <div>Header</div>
       <NavbarTop />
       <div className="flex row">
         <NavbarLeft />
-      </div>
+      </div> */}
       <div>
         <Routes>
           <Route path="/" element={<Contentful itemsPerPage={6} />} />
