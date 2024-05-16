@@ -1,14 +1,15 @@
 import Contentful from "./components/Contentful";
-import Navbar from "./components/Navbar";
+import NavbarTop from "./components/NavbarTop";
+import NavbarLeft from "./components/NavbarLeft";
 import "./App.css";
 
 function App() {
   return (
     <>
       <div>Header</div>
-      <Navbar/>
+      <NavbarTop/>
       <div className="flex row">
-
+    	  <NavbarLeft/>
         <Contentful itemsPerPage={6} />
       </div>
     </>
