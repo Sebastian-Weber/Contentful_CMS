@@ -1,13 +1,8 @@
-import { useState, useEffect } from "react";
-import { createClient } from "contentful";
+import { useState } from "react";
+import useFetchData from "./FetchData";
 import ReactPaginate from "react-paginate";
 import ApiCard from "./ApiCard";
 import BeatLoader from "react-spinners/BeatLoader";
-
-const client = createClient({
-  space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
-  accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN,
-});
 
 function Items({ currentItems }) {
   return (
@@ -17,6 +12,7 @@ function Items({ currentItems }) {
           return (
             <ApiCard
               key={entry.sys.id}
+              id={entry.fields.id}
               title={entry.fields.name}
               url={entry.fields.icon.fields.file.url}
               alt={entry.fields.title}
@@ -31,23 +27,8 @@ function Items({ currentItems }) {
 }
 
 function Contentful({ itemsPerPage }) {
-  const [entries, setEntries] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [itemOffset, setItemOffset] = useState(0);
-
-  useEffect(() => {
-    setIsLoading(true);
-    client
-      .getEntries()
-      .then((response) => {
-        setEntries(response.items);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error(error);
-        setIsLoading(false);
-      });
-  }, []);
+  const { entries, isLoading } = useFetchData();
 
   if (isLoading) {
     return (
