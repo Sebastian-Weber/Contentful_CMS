@@ -44,7 +44,8 @@ function DetailPage() {
         popularity={apiDetails.popularity}
         category={apiDetails.category}
       />
-
+      <h1>{apiDetails.title}</h1>
+      <p>{apiDetails.description}</p>
       <CodeMirror
         value={apiDetails.usage}
         height="200px"
