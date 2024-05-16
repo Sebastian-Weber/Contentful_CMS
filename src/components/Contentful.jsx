@@ -12,6 +12,7 @@ function Items({ currentItems }) {
           return (
             <ApiCard
               key={entry.sys.id}
+              id={entry.fields.id}
               title={entry.fields.name}
               url={entry.fields.icon.fields.file.url}
               alt={entry.fields.title}
