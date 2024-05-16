@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // import { createClient } from "contentful";
+import useFetchData from "./FetchData";
 import ReactPaginate from "react-paginate";
 import ApiCard from "./ApiCard";
 import BeatLoader from "react-spinners/BeatLoader";
@@ -31,6 +32,7 @@ function Items({ currentItems }) {
 function Contentful({ itemsPerPage }) {
   // const [entries, setEntries] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
+
   const [itemOffset, setItemOffset] = useState(0);
 
   // useEffect(() => {
