@@ -58,7 +58,7 @@ function ApiCard({ id, title, url, alt, description, popularity, category }) {
         </div>
 
         <hr className="w-10rem h-0.5 mx-auto md:my-3 bg-gray-100 border-0 rounded dark:bg-gray-700" />
-        <p className="font-normal text-slate-300 dark:text-gray-400 h-20 overflow-hidden">
+        <p className="font-normal text-slate-300 dark:text-gray-400 line-clamp-3">
           {description}
         </p>
         <button
