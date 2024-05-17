@@ -8,42 +8,31 @@ function OffCanvas(){
 
 return (
     <>
-            {/* icon bar */}
-                {/* <div>
-                    <svg id="hamburger-menu" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
-                    </svg>
-                </div>    
-                <div>
-                    <svg id="close-menu" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
-                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-                    </svg>
-                </div> */}
 
                {/* menu wrapper */}
-                <div id="menu-wrapper" className="justify-center fixed h-screen overflow-y-auto transition-transform bg-slate-700 w-64 dark:bg-gray-800 transform-none">
-
+                <div id="menu-wrapper" className="justify-center fixed transition-transform bg-slate-600 dark:bg-gray-800 transform-none">
+                {/* menu icon bar */}
                   <div id="iconbar" className="flex flex-row justify-between">
-
+                     {/* Open menu icon */}
                      <div className='p-6' onClick={()=>setShow(!show)}>
-                        <svg id="close-menu" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
+                        <svg id="opem-menu" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
                         </svg>
                      </div>
-               
-               
-            {show?<div>  
-               
 
-               <div id="inner-content-wrapper" className="p-6 -ml-20 bg-slate-600 w-64 dark:bg-gray-800">
-                  <div className='pb-4 flex flex-row justify-start'>
-                  <div className="">
-                     <svg id="close-menu" onClick={()=>setShow(!show)}  xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
-                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-                     </svg>
-                  </div>
-                  </div>
-                  <div id="Subheading" className="pl-2 pb-2 font-bold text-slate-100">Tags</div>
+               {/* UseState = true */}
+               {show?<div>  
+                        {/* inner content wrapper */}
+                        <div id="inner-content-wrapper" className="p-6 -ml-20 bg-slate-500 w-72 dark:bg-gray-800">
+                           <div className='pb-4 flex flex-row justify-start'>
+                              <div className="">
+                                 {/* Close icon */}
+                                 <svg id="close-menu" onClick={()=>setShow(!show)} xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
+                                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                                 </svg>
+                              </div>
+                           </div>
+                           <div id="Subheading" className="pl-2 pb-4 font-bold text-slate-100">Tags</div>
 
                         {/* --- wrap list items --- */}
                         <ul className="flex flex-wrap justify-start">
