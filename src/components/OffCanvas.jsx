@@ -25,17 +25,17 @@ return (
 
                   <div id="iconbar" className="flex flex-row justify-between">
 
-                     <div onClick={()=>setShow(!show)}>
+                     <div className='p-6' onClick={()=>setShow(!show)}>
                         <svg id="close-menu" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
                         </svg>
-                   </div>
+                     </div>
                
                
             {show?<div>  
                
 
-               <div id="inner-content-wrapper" className="p-6 bg-slate-600 w-64 dark:bg-gray-800">
+               <div id="inner-content-wrapper" className="p-6 -ml-20 bg-slate-600 w-64 dark:bg-gray-800">
                   <div className='pb-4 flex flex-row justify-start'>
                   <div className="">
                      <svg id="close-menu" onClick={()=>setShow(!show)}  xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
