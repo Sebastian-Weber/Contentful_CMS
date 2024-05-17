@@ -91,14 +91,14 @@ function OffCanvas({ onChangeFilter, categories }) {
       {/* menu wrapper */}
       <div
         id="menu-wrapper"
-        className="justify-center fixed transition-transform bg-slate-600 dark:bg-gray-800 transform-none"
+        className="justify-center fixed transition-transform  transform-none"
       >
         {/* menu icon bar */}
         <div id="iconbar" className="flex flex-row justify-between">
           {/* Open menu icon */}
           <div className="p-2" onClick={() => setShow(!show)}>
             <svg
-              id="opem-menu"
+              id="open-menu"
               xmlns="http://www.w3.org/2000/svg"
               height="32px"
               viewBox="0 -960 960 960"
@@ -115,7 +115,7 @@ function OffCanvas({ onChangeFilter, categories }) {
               {/* inner content wrapper */}
               <div
                 id="inner-content-wrapper"
-                className="p-6 -ml-20 bg-slate-500 w-72 dark:bg-gray-800"
+                className="-ml-12 pt-2 p-2 w-64 h-screen bg-slate-800 dark:bg-slate-800"
               >
                 <div className="pb-4 flex flex-row justify-start">
                   <div className="">
