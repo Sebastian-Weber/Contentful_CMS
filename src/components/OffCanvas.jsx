@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function OffCanvas({ onChangeFilter, categories }) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   function handleClick(event) {
     event.preventDefault();
     let a = categories;
@@ -82,7 +82,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                 {/* --- wrap list items --- */}
                 <ul className="flex flex-wrap justify-start">
                   <li className="my-1 px-2">
-                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-500">
                       <a
                         href=""
                         name="Entertainment"
@@ -95,7 +95,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                   </li>
 
                   <li className="my-1 px-2">
-                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-500">
                       <a
                         href=""
                         name="Data"
@@ -108,7 +108,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                   </li>
 
                   <li className="my-1 px-2">
-                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-500">
                       <a
                         href=""
                         name="Music"
@@ -121,7 +121,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                   </li>
 
                   <li className="my-1 px-2">
-                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-500">
                       <a
                         href=""
                         name="AI"
@@ -134,7 +134,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                   </li>
 
                   <li className="my-1 px-2">
-                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-500">
                       <a
                         href=""
                         name="Education"
@@ -147,7 +147,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                   </li>
 
                   <li className="my-1 px-2">
-                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-500">
                       <a
                         href=""
                         name="Social"
@@ -160,7 +160,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                   </li>
 
                   <li className="my-1 px-2">
-                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-500">
                       <a
                         href=""
                         name="Weather"
@@ -173,7 +173,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                   </li>
 
                   <li className="my-1 px-2">
-                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-500">
                       <a
                         href=""
                         name="Finance"
@@ -186,7 +186,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                   </li>
 
                   <li className="my-1 px-2">
-                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                    <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-500">
                       <a
                         href=""
                         name="eCommerce"
