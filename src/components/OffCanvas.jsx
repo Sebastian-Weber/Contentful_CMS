@@ -96,7 +96,7 @@ function OffCanvas({ onChangeFilter, categories }) {
         {/* menu icon bar */}
         <div id="iconbar" className="flex flex-row justify-between">
           {/* Open menu icon */}
-          <div className="p-6" onClick={() => setShow(!show)}>
+          <div className="p-2" onClick={() => setShow(!show)}>
             <svg
               id="opem-menu"
               xmlns="http://www.w3.org/2000/svg"
