@@ -4,6 +4,7 @@ import ReactPaginate from "react-paginate";
 import ApiCard from "./ApiCard";
 import BeatLoader from "react-spinners/BeatLoader";
 import NavbarTop from "./NavbarTop";
+import OffCanvas from "./OffCanvas";
 
 function Items({ currentItems, filter }) {
   // console.log(currentItems);
@@ -153,7 +154,8 @@ function Contentful({ itemsPerPage }) {
 
   return (
     <>
-      <NavbarTop onChangeFilter={handleFilterChange} categories={filter} />
+      {/* <NavbarTop onChangeFilter={handleFilterChange} categories={filter} /> */}
+      <OffCanvas onChangeFilter={handleFilterChange} categories={filter} />
       <div className="flex flex-col items-center justify-center px-12 min-h-screen bg-slate-600">
         <div className="flex flex-wrap mx-6 justify-normal gap-3">
           <Items
