@@ -156,7 +156,7 @@ function Contentful({ itemsPerPage }) {
     <>
       {/* <NavbarTop onChangeFilter={handleFilterChange} categories={filter} /> */}
       <OffCanvas onChangeFilter={handleFilterChange} categories={filter} />
-      <div className="flex flex-col items-center justify-center px-12 min-h-screen bg-slate-600">
+      <div className="flex flex-col w-3/5 mx-auto items-center justify-center px-12 min-h-screen bg-slate-600">
         <div className="flex flex-wrap mx-6 justify-normal gap-3">
           <Items
             currentItems={currentItems}
