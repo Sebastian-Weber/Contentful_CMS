@@ -115,7 +115,7 @@ function OffCanvas({ onChangeFilter, categories }) {
               {/* inner content wrapper */}
               <div
                 id="inner-content-wrapper"
-                className="p-6 -ml-20 w-64 h-screen bg-slate-800 dark:bg-slate-800"
+                className="-ml-12 pt-2 p-2 w-64 h-screen bg-slate-800 dark:bg-slate-800"
               >
                 <div className="pb-4 flex flex-row justify-start">
                   <div className="">

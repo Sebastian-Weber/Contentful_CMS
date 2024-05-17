@@ -143,7 +143,7 @@ function Contentful({ itemsPerPage }) {
   return (
     <>
       {/* <NavbarTop onChangeFilter={handleFilterChange} categories={filter} /> */}
-      <div className="flex  bg-slate-600 p-5 mb-10">
+      <div className="flex  bg-slate-600 mb-10">
         <OffCanvas onChangeFilter={handleFilterChange} categories={filter} />
         <form className="mx-auto">
           <label
@@ -173,7 +173,7 @@ function Contentful({ itemsPerPage }) {
             <input
               type="search"
               id="default-search"
-              className="block w-full p-4 ps-10 text-sm w-80 text-gray-900 border border-gray-800 rounded-lg bg-gray-800 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-800 rounded-lg bg-gray-800 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search for API..."
               required
             />
@@ -186,7 +186,7 @@ function Contentful({ itemsPerPage }) {
           </div>
         </form>
       </div>
-      <div className="flex flex-col w-3/5 mx-auto items-center justify-center px-12 min-h-screen bg-slate-600">
+      <div className="flex flex-col w-3/5 mx-auto items-center justify-center px-12  bg-slate-600">
         <div className="flex flex-wrap mx-6 justify-normal gap-3">
           <Items
             currentItems={currentItems}
