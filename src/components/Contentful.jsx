@@ -32,7 +32,7 @@ function Contentful({ itemsPerPage }) {
 
   if (isLoading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-slate-600">
+      <div className="flex flex-col items-center justify-center bg-slate-600">
         <div className="flex flex-wrap gap-2">
           <p className="text-slate-300">
             Loading...
@@ -55,7 +55,7 @@ function Contentful({ itemsPerPage }) {
     <>
 
 
-      <div className="flex flex-col w-3/4 mx-auto items-center justify-center px-12 min-h-screen bg-slate-600">
+      <div className="flex flex-col w-3/4 mx-auto items-center justify-center mt-20 px-12 bg-slate-600">
         <div className="flex flex-wrap mx-6 justify-center gap-3">
           <Items currentItems={currentItems} className="flex flex-wrap gap-2" />
         </div>
