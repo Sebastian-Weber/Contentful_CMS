@@ -1,8 +1,6 @@
 function NavbarTop() {
   return (
     <>
-      {/* top */}
-
       <div
         id="top-menu-box-wrapper"
         className="justify-center py-3 bg-slate-500"

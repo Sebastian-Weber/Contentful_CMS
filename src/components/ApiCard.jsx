@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import emojiHappy from "../assets/emoji-happy.svg";
 import emojiUnhappy from "../assets/emoji-unhappy.svg";
 import emojiNeutral from "../assets/emoji-neutral.svg";
