@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import useFetchData from "./FetchData";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CodeMirror from "@uiw/react-codemirror";
 import { langs } from "@uiw/codemirror-extensions-langs";
 import { darcula } from "@uiw/codemirror-theme-darcula";
@@ -29,7 +30,7 @@ function DetailPage() {
   return (
     <>
       <div className="flex mx-auto justify-center m-5">
-        <div className="block w-4/5 p-8  bg-slate-700 border border-slate-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
+        <div className="block w-4/5 p-8  bg-slate-700 border border-slate-700 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <div className="flex items-end pt-0 ">
             <img
               className="h-12 pt-0"
@@ -44,7 +45,7 @@ function DetailPage() {
                 by {apiDetails.author}
               </p>
             </div>
-            <div className="grow">
+            <div className="grow pl-40">
               <p className="font-normal text-slate-300 dark:text-gray-400">
                 category: {apiDetails.category}
               </p>
@@ -70,6 +71,14 @@ function DetailPage() {
                 theme={darcula}
               />
             </div>
+          </div>
+          <hr className="w-10rem h-0.5 mx-auto md:my-3 bg-gray-100 border-0 rounded dark:bg-gray-700" />
+          <div className="flex justify-end">
+            <Link to={"/"}>
+              <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                back
+              </button>
+            </Link>
           </div>
         </div>
       </div>
