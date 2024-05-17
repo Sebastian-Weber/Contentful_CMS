@@ -119,7 +119,7 @@ function Contentful({ itemsPerPage }) {
   if (isLoading) {
     return (
       <div className="flex flex-col items-center justify-center bg-slate-600">
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 h-screen flex items-center justify-center">
           <p className="text-slate-300">
             Loading...
             <BeatLoader color="HotPink" thickness={50} size={10} />
@@ -168,7 +168,7 @@ function Contentful({ itemsPerPage }) {
           <div className="p-4">
             <div className="">
               <ReactPaginate
-                className="flex flex-row p-3 gap-3 font-normal text-slate-300 dark:text-gray-400 bg-slate-500"
+                className="flex flex-row p-3 gap-3 font-normal text-slate-300 dark:text-gray-400 bg-slate-700"
                 onPageChange={handlePageClick}
                 pageCount={pageCount}
                 renderOnZeroPageCount={null}

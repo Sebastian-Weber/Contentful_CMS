@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function OffCanvas({ onChangeFilter, categories }) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   function handleClick(event) {
     event.preventDefault();
     let a = categories;
@@ -37,7 +37,7 @@ function OffCanvas({ onChangeFilter, categories }) {
           {/* Open menu icon */}
           <div className="p-6" onClick={() => setShow(!show)}>
             <svg
-              id="opem-menu"
+              id="open-menu"
               xmlns="http://www.w3.org/2000/svg"
               height="32px"
               viewBox="0 -960 960 960"
@@ -54,7 +54,7 @@ function OffCanvas({ onChangeFilter, categories }) {
               {/* inner content wrapper */}
               <div
                 id="inner-content-wrapper"
-                className="p-6 -ml-20 bg-slate-500 w-72 dark:bg-gray-800"
+                className="p-6 -ml-20 h-screen bg-gray-700 w-72 dark:bg-gray-800"
               >
                 <div className="pb-4 flex flex-row justify-start">
                   <div className="">
