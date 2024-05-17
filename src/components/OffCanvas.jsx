@@ -28,13 +28,8 @@ return (
                   <div id="iconbar" className="flex flex-row justify-between">
 
                   <div className=''>
-            {
-              show?<h1> ...menu goes here...</h1>:null  
-            }
-         	<button onClick={()=>setShow(!show)}>Icon button</button> 
-        </div>  
-
-                  </div>
+               {
+              show?<div> 
 
                   <div id="Subheading" className="px-4 mx-2 pt-6 font-semibold text-slate-100">Tags</div>
                   <div id="inner-content-wrapper" className="flex flex-col px-4 py-6">
@@ -97,8 +92,22 @@ return (
                            </li>  
                                       
                         </ul>
-
                      </div>
+              </div>:null  
+            }
+                <div onClick={()=>setShow(!show)}>
+                    <svg id="close-menu" xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
+                </div>
+        </div>  
+
+                  </div>
+
+                                      
+
+
+
                 </div>
                
         </>
