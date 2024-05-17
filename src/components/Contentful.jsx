@@ -54,14 +54,20 @@ function Contentful({ itemsPerPage }) {
   const [filter, setFilter] = useState([]);
   const { entries, isLoading } = useFetchData();
 
-  const handleFilterChange = useCallback(
-    (newFilter) => {
-      console.log(newFilter);
-      const arr = [...newFilter];
-      setFilter(arr);
-    },
-    [filter]
-  );
+  // const handleFilterChange = useCallback(
+  //   (newFilter) => {
+  //     console.log(newFilter);
+  //     const arr = [...newFilter];
+  //     setFilter(arr);
+  //   },
+  //   [filter]
+  // );
+
+  function handleFilterChange(newFilter) {
+    console.log(newFilter);
+    const arr = [...newFilter];
+    setFilter(arr);
+  }
 
   useEffect(() => {
     console.log("filter ist");
