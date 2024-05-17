@@ -21,7 +21,7 @@ function ApiCard({ id, title, url, alt, description, popularity, category }) {
       "bg-yellow-100 text-yellow-800 text-xs font-medium me-2 px-2.5 py-1 rounded-full dark:bg-yellow-900 dark:text-yellow-300",
     AI: "bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-1 rounded-full dark:bg-red-900 dark:text-red-300",
     Weather:
-      "bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300",
+      "py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-cyan-400 bg-cyan-100",
   };
 
   function getEmoji() {
@@ -62,15 +62,24 @@ function ApiCard({ id, title, url, alt, description, popularity, category }) {
         <p className="font-normal text-slate-300 min-h-24 dark:text-gray-400 line-clamp-4">
           {description}
         </p>
-        <Link to={`/API-details/${id}`} >
+        <Link to={`/API-details/${id}`}>
           <div className="flex flex-row justify-end pb-2">
             <div className="flex flex-row">
-              <button id="toggle-btn" className="mt-4 text-sm text-blue-500 focus:outline-none">
+              <button
+                id="toggle-btn"
+                className="mt-4 text-sm text-blue-500 focus:outline-none"
+              >
                 Read More
               </button>
               <div className="pt-4 px-2">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#3b82f6">
-                  <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#3b82f6"
+                >
+                  <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
                 </svg>
               </div>
             </div>
