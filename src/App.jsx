@@ -1,6 +1,7 @@
 import Contentful from "./components/Contentful";
 import NavbarTop from "./components/NavbarTop";
 import NavbarLeft from "./components/NavbarLeft";
+import OffCanvas from "./components/OffCanvas";
 import DetailPage from "./components/DetailPage";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
@@ -11,7 +12,7 @@ function App() {
       <div>
         <NavbarTop />
         <div className="flex row">
-          <NavbarLeft />
+          <OffCanvas/>
         </div>
         <div>
           <Routes>
