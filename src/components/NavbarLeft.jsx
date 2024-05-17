@@ -62,9 +62,9 @@ function NavbarLeft() {
               </div>
               <ul className="flex flex-col items-start justify-start">
                 {/* --- Column --- */}
-                <li className="my-1 px-2">
-                  <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
-                    <a href="" className=" text-sky-900">
+                <li className="my-1 px-2 ">
+                  <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 ">
+                    <a href="" className=" text-sky-900 ">
                       Entertainment
                     </a>
                   </div>
@@ -119,7 +119,7 @@ function NavbarLeft() {
                 </li>
 
                 <li className="my-1 px-2">
-                  <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200">
+                  <div className="py-1 px-4 gap-2 font-semibold text-sm rounded-full text-slate-300 dark:text-gray-400 bg-sky-200 hover:bg-sky-700">
                     <a href="" className=" text-sky-900">
                       Finance
                     </a>
