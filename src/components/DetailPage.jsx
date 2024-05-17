@@ -74,9 +74,11 @@ function DetailPage() {
           </div>
           <hr className="w-10rem h-0.5 mx-auto md:my-3 bg-gray-100 border-0 rounded dark:bg-gray-700" />
           <div className="flex justify-end">
-            <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              <Link to={"/"}>back</Link>
-            </button>
+            <Link to={"/"}>
+              <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                back
+              </button>
+            </Link>
           </div>
         </div>
       </div>
