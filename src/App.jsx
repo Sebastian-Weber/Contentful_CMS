@@ -9,25 +9,11 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <>
-<<<<<<< HEAD
-      {/* <div>Header</div>
-      <NavbarTop />
-      <div className="flex row">
-        <NavbarLeft />
-      </div> */}
-=======
->>>>>>> main
       <div>
-        <NavbarTop />
-        <div className="flex row">
-          <OffCanvas/>
-        </div>
-        <div>
-          <Routes>
-            <Route path="/" element={<Contentful itemsPerPage={6} />} />
-            <Route path="/API-details/:id" element={<DetailPage />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Contentful itemsPerPage={6} />} />
+          <Route path="/API-details/:id" element={<DetailPage />} />
+        </Routes>
       </div>
     </>
   );
