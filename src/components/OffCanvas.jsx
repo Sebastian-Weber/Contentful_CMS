@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function OffCanvas({ onChangeFilter, categories }) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [activeFilter, setActiveFilter] = useState([]);
 
   // const activeFiltersInit = {
