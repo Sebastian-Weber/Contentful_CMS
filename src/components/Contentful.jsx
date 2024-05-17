@@ -119,7 +119,7 @@ function Contentful({ itemsPerPage }) {
   if (isLoading) {
     return (
       <div className="flex flex-col items-center justify-center bg-slate-600">
-        <div className="flex flex-wrap gap-2 h-screen flex items-center justify-center">
+        <div className="flex flex-wrap gap-2 h-screen items-center justify-center">
           <p className="text-slate-300">
             Loading...
             <BeatLoader color="HotPink" thickness={50} size={10} />
@@ -157,7 +157,7 @@ function Contentful({ itemsPerPage }) {
       {/* <NavbarTop onChangeFilter={handleFilterChange} categories={filter} /> */}
       <OffCanvas onChangeFilter={handleFilterChange} categories={filter} />
       <div className="flex flex-col items-center justify-center px-12 min-h-screen bg-slate-600">
-        <div className="flex flex-wrap mx-6 justify-normal gap-3">
+        <div className="flex flex-wrap mx-6 justify-normal min-h-full gap-3">
           <Items
             currentItems={currentItems}
             filter={filter}
@@ -166,18 +166,29 @@ function Contentful({ itemsPerPage }) {
         </div>
         <footer className="sticky bottom-0">
           <div className="p-4">
-            <div className="">
+
               <ReactPaginate
-                className="flex flex-row p-3 gap-3 font-normal text-slate-300 dark:text-gray-400 bg-slate-700"
+                className="flex flex-row p-3 gap-3 font-semibold rounded-md text-slate-300"
                 onPageChange={handlePageClick}
                 pageCount={pageCount}
                 renderOnZeroPageCount={null}
                 breakLabel="..."
-                nextLabel="next >"
+                nextLabel={
+                  <div className="w-6 h-6 pt-1 mx-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e2e8f0"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+                  </div>
+                }
                 pageRangeDisplayed={3}
-                previousLabel="< previous"
+                previousLabel={
+                  <div className="w-6 h-6 pt-1 mx-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e2e8f0"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+                  </div>
+                }
+                previousLabelClassName=""
+                activeClassName="flex items-center justify-center w-6 h-6 p-4 mx-1 bg-slate-400"
+                pageClassName="flex items-center justify-center w-6 h-6 p-4 mx-1 bg-slate-700"
+                containerClassName="bg-slate-200"
               />
-            </div>
           </div>
         </footer>
       </div>

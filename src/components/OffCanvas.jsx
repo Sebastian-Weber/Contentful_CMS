@@ -30,7 +30,7 @@ function OffCanvas({ onChangeFilter, categories }) {
       {/* menu wrapper */}
       <div
         id="menu-wrapper"
-        className="justify-center fixed transition-transform bg-slate-600 dark:bg-gray-800 transform-none"
+        className="justify-center fixed transition-transform  transform-none"
       >
         {/* menu icon bar */}
         <div id="iconbar" className="flex flex-row justify-between">
@@ -54,7 +54,7 @@ function OffCanvas({ onChangeFilter, categories }) {
               {/* inner content wrapper */}
               <div
                 id="inner-content-wrapper"
-                className="p-6 -ml-20 h-screen bg-gray-700 w-72 dark:bg-gray-800"
+                className="p-6 -ml-20 w-64 h-screen bg-slate-800 dark:bg-slate-800"
               >
                 <div className="pb-4 flex flex-row justify-start">
                   <div className="">
