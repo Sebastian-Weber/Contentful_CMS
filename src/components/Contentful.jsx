@@ -198,29 +198,29 @@ function Contentful({ itemsPerPage }) {
           <div className="p-4">
 
               <ReactPaginate 
+                containerClassName=""
                 className="flex flex-row"
                 onPageChange={handlePageClick}
                 pageCount={pageCount}
                 renderOnZeroPageCount={null}
-                breakLabel="..."
-                nextLabel={
-                  <div className="w-10 h-10 mx-1 pl-2 pt-2 text-semibold bg-slate-800">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e2e8f0">
-                    <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
-                  </div>
-                }
                 pageRangeDisplayed={3}
+                pageClassName={"w-10 h-10 mx-1 pl-4 pt-2 text-slate-300 font-semibold bg-slate-800"}
+                activeClassName="bg-slate-400"
+                breakLabel="..."
+
                 previousLabel={
-                  <div className="w-10 h-10 mx-1 pl-4 pt-2 bg-slate-800">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e2e8f0">
+                  <div className="w-10 h-10 mx-1 pl-4 pt-3 bg-slate-800">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#e2e8f0">
                     <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
                   </div>
                 }
-                previousLabelClassName=""
+                nextLabel={
+                  <div className="w-10 h-10 mx-1 pl-3 pt-3 text-semibold bg-slate-800">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#e2e8f0">
+                    <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+                  </div>
+                }
 
-                pageClassName="w-10 h-10 mx-1 pl-4 pt-2 text-slate-400 font-semibold bg-slate-800"
-                activeClassName="bg-slate-200"
-                containerClassName=""
               />
           </div>
         </footer>
