@@ -135,7 +135,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                 </div>
                 <div
                   id="Subheading"
-                  className="pl-2 pb-4 font-bold text-slate-100"
+                  className="pl-2 pb-4 font-semibold text-slate-100"
                 >
                   Tags
                 </div>
