@@ -205,7 +205,7 @@ function Contentful({ itemsPerPage }) {
                 renderOnZeroPageCount={null}
                 pageRangeDisplayed={3}
                 pageClassName={"w-10 h-10 mx-1 pl-4 pt-2 text-slate-300 font-semibold bg-slate-800"}
-                activeClassName="bg-slate-400"
+                activeClassName="text-slate-400 bg-slate-300"
                 breakLabel="..."
 
                 previousLabel={
