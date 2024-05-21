@@ -91,7 +91,7 @@ function OffCanvas({ onChangeFilter, categories }) {
       {/* menu wrapper */}
       <div
         id="menu-wrapper"
-        className="justify-center fixed transition-transform  transform-none"
+        className="justify-center fixed"
       >
         {/* menu icon bar */}
         <div id="iconbar" className="flex flex-row justify-between">
@@ -135,7 +135,7 @@ function OffCanvas({ onChangeFilter, categories }) {
                 </div>
                 <div
                   id="Subheading"
-                  className="pl-2 pb-4 font-bold text-slate-100"
+                  className="pl-2 pb-4 font-semibold text-slate-100"
                 >
                   Tags
                 </div>
